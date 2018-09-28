@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 // servicios
 import {environment} from '../environments/environment';
 import {AuthService} from './services/auth.service';
+import {AuthGuard} from '../app/guards/auth.guard';
 
 // modulos
 import {AngularFireModule} from 'angularfire2';
@@ -39,7 +40,7 @@ import { NotFoundPageComponent } from './component/not-found-page/not-found-page
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

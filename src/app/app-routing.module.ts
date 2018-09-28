@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// servicios
+import {AuthGuard} from '../app/guards/auth.guard';
+
 // componentes
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
@@ -14,7 +17,7 @@ const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
-  {path: 'privado', component: PrivadoPageComponent},
+  {path: 'privado', component: PrivadoPageComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundPageComponent}
 ];
 
