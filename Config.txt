@@ -1,0 +1,22 @@
+--------***********  CREAMOS LA APLICACION DE ANGULAR 6  ***********------------
+
+----genera proyecto con routing-----
+
+ng new LoginFirebase --routing
+cd  LoginFirebase
+
+--Instalación de dependencias-----
+npm i --save bootstrap popper.js jquery font-awesome bootswatch
+npm i --save firebase angularfire2
+npm i --save rxjs-compat
+
+--Componentes---
+ng g c component/homePage
+ng g c component/navbar
+ng g c component/registerPage
+ng g c component/loginPage
+ng g c component/privadoPage
+ng g c component/notFoundPage
+
+---Servicios----
+ng g s services/auth
