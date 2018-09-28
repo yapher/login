@@ -20,3 +20,18 @@ ng g c component/notFoundPage
 
 ---Servicios----
 ng g s services/auth
+
+--git--
+--cofiruramos github--
+echo "# login" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/yapher/login.git
+git push -u origin master
+
+--modificamos backup github --
+git status  --ver cambios
+git add .   --Agregamos los cambios
+git commit -am "instalación de dependencias"  -- creamos punto de restauración
+git push   --subimos las modificaciones al servidor de github
