@@ -41,4 +41,16 @@ export class LoginPageComponent implements OnInit {
       this.router.navigate(['/login']);
     });
   }
+
+  onClikFacebookLogin() {
+    this.authService.loginFacebook()
+    .then( (res) => {
+      this.flashMensaje.show('Usuario logeado correctamente', {cssClass: 'alert-success', timeout: 4000});
+      this.router.navigate(['/privado']);
+      console.log(res);
+    }).catch( (err) => {
+      this.flashMensaje.show(err.message, {cssClass: 'alert-danger', timeout: 4000});
+      this.router.navigate(['/login']);
+    });
+  }
 }
